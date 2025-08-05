@@ -1,6 +1,4 @@
-import { ref } from "process"
-
-process.env.NODE_ENV = "development"
+process.env.NODE_ENV = "test"
 process.env.PORT = "3001"
 process.env.JWT_SECRET = "your_jwt_secret"
 process.env.JWT_REFRESH_SECRET = "your_jwt_refresh_secret"
@@ -51,4 +49,8 @@ export function resetAllMocks() {
             mock.mockReset();
         }
     });
+}
+
+declare global {
+    var mockPrisma: typeof mockPrismaClient;
 }
