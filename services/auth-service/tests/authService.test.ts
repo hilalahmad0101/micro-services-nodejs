@@ -37,7 +37,7 @@ describe('AuthService', () => {
     });
 
     describe('constructor', () => {
-        it('should initialize with environment variables', () => {
+        it('should initialize waith environment variables', () => {
             expect(authService).toBeInstanceOf(AuthService);
         });
     });
